@@ -1,4 +1,4 @@
-rootProject.name='rxandroid-root'
+rootProject.name = 'rxandroid-root'
 
-include ':rxandroid'
+include ':rxandroid', ':rxandroiddemo', ':myeditext'
 include ':sample-app'
