@@ -128,11 +128,11 @@ public class RxBus
         {
             return;
         }
-        if (mSubscriptionMap.get(key) != null)
+        //判断是否取消订阅，true表示已取消订阅，false表示未取消订阅
+        if (mSubscriptionMap.get(key) != null && !mSubscriptionMap.get(key).isUnsubscribed())
         {
             mSubscriptionMap.get(key).unsubscribe();
         }
-
-        mSubscriptionMap.remove(key);
+          mSubscriptionMap.remove(key);
     }
 }
